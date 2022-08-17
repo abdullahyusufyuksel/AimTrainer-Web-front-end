@@ -32,20 +32,14 @@ class App extends Component {
 
   changeQuery(e)
   {
-    this.setState({ searchBarText: e.target.value, profileToSearch: "/profile/" + e.target.value }, ()=>
-    {
-      console.log(this.state.searchBarText);
-    });
+    this.setState({ searchBarText: e.target.value, profileToSearch: "/profile/" + e.target.value });
   }
   handleClick()
   {
-    console.log("button clicked");
-    console.log(this.props)
     this.props.router.navigate(this.state.profileToSearch, this.render());
     this.props.router.location.reload();
   }
   handleKeyPress(target) {
-    console.log(target);
     if(target.charCode == 13){
       this.props.router.navigate(this.state.profileToSearch, this.render());
       this.props.router.location.reload();
