@@ -35,9 +35,7 @@ class Profile extends Component
     };
     constructor(props)
     {
-        console.log("profile opened");
         super(props);
-        console.log(this.props);
         this.state.currentUser.username = this.props.router.params.username;
     }
 
@@ -127,9 +125,6 @@ class Profile extends Component
                                         {
                                             this.state.currentUser.isLoaded && this.state.currentUser.gamesPlayed.map( (row, index) =>
                                             {
-                                                index++;
-                                                if(index < 5)
-                                                {
                                                     let gameType = row.type === "Tracker" ? "danger" : "primary";
                                                     return(
                                                         <ListGroup.Item className="d-flex justify-content-between align-items-start" key={row.id}>
@@ -141,7 +136,6 @@ class Profile extends Component
                                                             <Badge bg="primary" pill>{row.points}</Badge>
                                                         </ListGroup.Item>
                                                     )
-                                                }
                                             })
                                         }
                                 

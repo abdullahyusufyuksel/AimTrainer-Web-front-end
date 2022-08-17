@@ -61,6 +61,7 @@ class Home extends Component
                         {
                                 this.state.isLoaded && this.state.gridshotLeaderboard.map( row => 
                                 {
+                                    console.log(row);
                                         return (
                                         <ListGroup.Item  key={row.player + "_" + row.type} className="d-flex justify-content-between align-items-start">
                                                 <div className="ms-2 me-auto">
