@@ -42,7 +42,8 @@ class Home extends Component
                 trackerLeaderboard: res.data,
                 isLoaded: true
             });
-        }); 
+        });
+        console.log(this.state);
     }
 
 
